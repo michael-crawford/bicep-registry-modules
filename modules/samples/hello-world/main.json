@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.17.1.54307",
+      "templateHash": "8585225941353157912"
+    },
+    "description": "A \"שָׁלוֹם עוֹלָם\" sample Bicep registry module",
+    "owner": "bicep-admins"
+  },
+  "parameters": {
+    "name": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of someone to say hi to."
+      }
+    }
+  },
+  "resources": [],
+  "outputs": {
+    "greeting": {
+      "type": "string",
+      "metadata": {
+        "description": "The hello message."
+      },
+      "value": "[format('Hello from Bicep registry - Hi {0}!', parameters('name'))]"
+    }
+  }
+}
