@@ -1,4 +1,4 @@
-name: Run Azure Login with OpenID Connect
+name: On workflow_dispatch display Azure information
 
 on:
   workflow_dispatch:
