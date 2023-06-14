@@ -14,16 +14,16 @@ A "Hello World" sample Bicep registry module
 
 ## Outputs
 
-| Name     | Type   | Description        |
-| :------- | :----: | :----------------- |
-| greeting | string | The hello message. |
+| Name       | Type     | Description        |
+| :--------- | :------: | :----------------- |
+| `greeting` | `string` | The hello message. |
 
 ## Examples
 
 ### Using the hello world module
 
 ```bicep
-module helloWorld 'br/public:samples/hello-world:1.0.1' = {
+module helloWorld 'br/public:samples/hello-world:0.0.1' = {
   name: 'helloWorld'
   params: {
     name: 'Bicep developers'
