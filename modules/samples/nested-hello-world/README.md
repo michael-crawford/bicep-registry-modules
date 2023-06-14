@@ -1,6 +1,6 @@
 # Nested Hello World
 
-A variant of the "Hello World" sample Bicep registry module demonstrating use of nested modules
+A "Hello World" sample Bicep registry module showing a nested module
 
 ## Description
 

@@ -1,0 +1,77 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.18.4.5664",
+      "templateHash": "6601312737172083252"
+    }
+  },
+  "parameters": {
+    "name": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of someone to say hi to."
+      }
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2022-09-01",
+      "name": "[format('helloWorld-{0}', parameters('name'))]",
+      "properties": {
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "name": {
+            "value": "[parameters('name')]"
+          }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "metadata": {
+            "_generator": {
+              "name": "bicep",
+              "version": "0.18.4.5664",
+              "templateHash": "11970007487668731589"
+            },
+            "description": "A \"Hello World\" sample Bicep registry module showing a nested module",
+            "owner": "michael-crawford"
+          },
+          "parameters": {
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "The name of someone to say hi to."
+              }
+            }
+          },
+          "resources": [],
+          "outputs": {
+            "greeting": {
+              "type": "string",
+              "metadata": {
+                "description": "The hello message."
+              },
+              "value": "[format('Hello from Bicep registry - Hi {0}!', parameters('name'))]"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "outputs": {
+    "greeting": {
+      "type": "string",
+      "metadata": {
+        "description": "The hello message."
+      },
+      "value": "[reference(resourceId('Microsoft.Resources/deployments', format('helloWorld-{0}', parameters('name'))), '2022-09-01').outputs.greeting.value]"
+    }
+  }
+}
