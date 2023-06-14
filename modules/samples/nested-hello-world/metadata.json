@@ -1,0 +1,6 @@
+{
+  "$schema": "https://aka.ms/bicep-registry-module-metadata-file-schema-v2#",
+  "name": "Nested Hello World",
+  "summary": "A \u0022Hello World\u0022 sample Bicep registry module showing a nested module",
+  "owner": "michael-crawford"
+}
